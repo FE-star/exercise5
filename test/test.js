@@ -129,4 +129,5 @@ describe('regex', function () {
       `...`
     )
   })
+
 })
