@@ -60,6 +60,7 @@ describe('regex', function () {
 
   it('首字母必须满足下面条件', function () {
     const char_class = require('../lib/char_class')
+
     assert.ok(
       char_class(`az`),
       `az`
@@ -100,6 +101,7 @@ describe('regex', function () {
 
   it('匹配开头非数字，第二个字符非大写字母', function () {
     const negated_char_class = require('../lib/negated_char_class')
+   // console.log(char_class(`az`))
     assert.ok(
       !negated_char_class(`1A`),
       `1A`
