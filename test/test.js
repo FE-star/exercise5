@@ -1,7 +1,7 @@
 const assert = require('assert')
 
 describe('regex', function () {
-  it('可匹配 LITERALLY 开始', function () {
+  it.only('可匹配 LITERALLY 开始', function () {
     const anchor_start = require('../lib/anchor_start')
     assert.ok(
       anchor_start(`LITERALLY CAN'T EVEN`),
@@ -29,7 +29,7 @@ describe('regex', function () {
     )
   })
 
-  it('可匹配 BANANAS 结束', function () {
+  it.only('可匹配 BANANAS 结束', function () {
     const anchor_end = require('../lib/anchor_end')
 
     assert.ok(
@@ -58,7 +58,7 @@ describe('regex', function () {
     )
   })
 
-  it('首字母必须满足下面条件', function () {
+  it.only('首字母必须满足下面条件', function () {
     const char_class = require('../lib/char_class')
     assert.ok(
       char_class(`az`),
@@ -98,7 +98,7 @@ describe('regex', function () {
     )
   })
 
-  it('匹配开头非数字，第二个字符非大写字母', function () {
+  it.only('匹配开头非数字，第二个字符非大写字母', function () {
     const negated_char_class = require('../lib/negated_char_class')
     assert.ok(
       !negated_char_class(`1A`),
